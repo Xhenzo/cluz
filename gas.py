@@ -1139,7 +1139,7 @@ async def kirim(url, ipadr, method='GET', data=None, headers=None):
 #================# SERANGAN GANDA #================#
 async def consattack(link):  
     global rcount, lastip  
-    semaphore = asyncio.Semaphore(500)
+    semaphore = asyncio.Semaphore(5500)
     while True:  
         async with semaphore:  
             ipadr = next(ipgen)  
